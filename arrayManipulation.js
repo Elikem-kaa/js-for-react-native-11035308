@@ -7,5 +7,15 @@ function processArray(arr) {
         }
     });
 }
+function formatArrayStrings(stringArr, numArr) {
+    return stringArr.map(function(str, index) {
+        if (numArr[index] % 2 === 0) {
+            return str.toUpperCase();
+        } else {
+            return str.toLowerCase();
+        }
+    });
+}
 
-module.exports = processArray;
+
+module.exports = {processArray, formatArrayStrings};
